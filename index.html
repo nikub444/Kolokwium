@@ -24,8 +24,8 @@
             1
         </div>
     {{ message }}
-    <div v-for="i in 10" style="display: flex; content: wrap;">
-        <div v-for="j in 10" style="display: flex; content: wrap;">
+    <div v-for="i in rows" style="display: flex; content: wrap;">
+        <div v-for="j in columns" style="display: flex; content: wrap;">
             <div class="cell">
                 {{i}},{{j}}
             </div>
@@ -40,7 +40,8 @@
         data: {
             message: 'Powodzenia',
             rows: 10,
-            columns: 10
+            columns: 10,
+
         }
     })
     </script>
