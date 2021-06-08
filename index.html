@@ -24,13 +24,23 @@
             1
         </div>
     {{ message }}
+    <div v-for="i in 10" style="display: flex; content: wrap;">
+        <div v-for="j in 10" style="display: flex; content: wrap;">
+            <div class="cell">
+                {{i}},{{j}}
+            </div>
+        </div>
+    </div>
+    
     </div>
 
     <script>
     var app = new Vue({
         el: '#app',
         data: {
-            message: 'Powodzenia'
+            message: 'Powodzenia',
+            rows: 10,
+            columns: 10
         }
     })
     </script>
