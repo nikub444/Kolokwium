@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kolokwium</title>
+    <script src="https://unpkg.com/vue"></script>
+    <style>
+        .cell{
+            height: 50px;
+            width: 50px;
+            background-color: orange;
+            border: 1px solid grey;
+            border-radius: 10px;
+            margin-top: 10px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div class="cell">
+
+        </div>
+    {{ message }}
+    </div>
+
+    <script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            message: 'Powodzenia'
+        }
+    })
+    </script>
+</body>
+</html>
