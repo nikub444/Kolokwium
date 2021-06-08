@@ -30,7 +30,7 @@
     {{ message }}
     <div v-for="i in rows" style="display: flex; content: wrap;">
         <div v-for="j in columns" style="display: flex; content: wrap;">
-            <div class="cell " v-bind:class = "(active===`${i},${j}`) ? 'active':'default'">
+            <div class="cell " v-bind:class = "(active===`${i},${j}`) ? 'active':'default'" v-on:click="active =`${i},${j}`">
                 {{i}},{{j}}
             </div>
         </div>
