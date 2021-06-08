@@ -16,17 +16,21 @@
             align-items: center;
             justify-content: center;
         }
+        .active{
+            background-color: red;
+            color: white;
+        }
     </style>
 </head>
 <body>
     <div id="app">
-        <div class="cell">
+        <div class="cell" >
             1
         </div>
     {{ message }}
     <div v-for="i in rows" style="display: flex; content: wrap;">
         <div v-for="j in columns" style="display: flex; content: wrap;">
-            <div class="cell">
+            <div class="cell " v-bind:class = "(active===`${i},${j}`) ? 'active':'default'">
                 {{i}},{{j}}
             </div>
         </div>
@@ -41,7 +45,7 @@
             message: 'Powodzenia',
             rows: 10,
             columns: 10,
-
+            active: "1,1"
         }
     })
     </script>
